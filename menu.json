@@ -1,0 +1,94 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "title": "Espresso",
+      "description": "Single-origin short shot with a rich crema.",
+      "price": 250,
+      "orderButton": { "text": "Order", "url": "/order/1" },
+      "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Small espresso shot with crema on top — rich and dark."
+    },
+    {
+      "id": 2,
+      "title": "Cappuccino",
+      "description": "Equal parts espresso, steamed milk, and airy foam.",
+      "price": 375,
+      "orderButton": { "text": "Order", "url": "/order/2" },
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Cappuccino in a cup with latte art and a saucer."
+    },
+    {
+      "id": 3,
+      "title": "Latte",
+      "description": "Smooth espresso with steamed milk and a light layer of foam.",
+      "price": 425,
+      "orderButton": { "text": "Order", "url": "/order/3" },
+      "image": "https://images.unsplash.com/photo-1527168027773-0cc890c22e4e?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Creamy latte with delicate latte art on top."
+    },
+    {
+      "id": 4,
+      "title": "Cold Brew",
+      "description": "Slow-steeped cold brew, bright and smooth over ice.",
+      "price": 400,
+      "orderButton": { "text": "Order", "url": "/order/4" },
+      "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Tall glass of cold brew over ice with condensation."
+    },
+    {
+      "id": 5,
+      "title": "Matcha Latte",
+      "description": "Ceremonial-grade matcha whisked with steamed milk.",
+      "price": 450,
+      "orderButton": { "text": "Order", "url": "/order/5" },
+      "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Vibrant green matcha latte in a ceramic cup."
+    },
+    {
+      "id": 6,
+      "title": "Croissant",
+      "description": "Buttery, flaky French-style viennoiserie, baked fresh daily.",
+      "price": 275,
+      "orderButton": { "text": "Order", "url": "/order/6" },
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Golden flaky croissant on a wooden board."
+    },
+    {
+      "id": 7,
+      "title": "Blueberry Muffin",
+      "description": "Moist muffin studded with fresh blueberries and a crunchy top.",
+      "price": 325,
+      "orderButton": { "text": "Order", "url": "/order/7" },
+      "image": "https://images.unsplash.com/photo-1608198093002-ad4e005484a8?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Blueberry muffin with berries peeking through the top."
+    },
+    {
+      "id": 8,
+      "title": "Avocado Toast",
+      "description": "Sourdough toast topped with smashed avocado, chili flakes, and lemon.",
+      "price": 650,
+      "orderButton": { "text": "Order", "url": "/order/8" },
+      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Sourdough toast topped with mashed avocado and chili flakes."
+    },
+    {
+      "id": 9,
+      "title": "Chocolate Cake (Slice)",
+      "description": "Decadent chocolate cake with a rich ganache frosting.",
+      "price": 475,
+      "orderButton": { "text": "Order", "url": "/order/9" },
+      "image": "https://images.unsplash.com/photo-1601979031855-cc0f3cfcbb53?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Slice of chocolate cake with glossy ganache."
+    },
+    {
+      "id": 10,
+      "title": "Seasonal Sandwich",
+      "description": "Chef's choice sandwich made with seasonal ingredients.",
+      "price": 700,
+      "orderButton": { "text": "Order", "url": "/order/10" },
+      "image": "https://images.unsplash.com/photo-1585238341986-7f9b8d53f1a7?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Fresh sandwich cut in half with visible seasonal filling."
+    }
+  ]
+}
