@@ -14,13 +14,22 @@ const menu = ref([]);
 const expanded = ref(false);
 const loading = ref(true);  
 const error = ref(null);     
+const searchQuery = ref(''); 
 
 const initialLimit = computed(() => {
   return typeof props.limit === 'number' ? props.limit : menu.value.length;
 });
 
+const filteredMenu = computed(() => {
+  if (!searchQuery.value) return menu.value;
+  return menu.value.filter(item =>
+    item.title.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchQuery.value.toLowerCase())
+  );
+});
+
 const displayed = computed(() => {
-  return expanded.value ? menu.value : menu.value.slice(0, initialLimit.value);
+  return expanded.value ? filteredMenu.value : filteredMenu.value.slice(0, initialLimit.value);
 });
 
 const toggleExpanded = () => {
@@ -55,6 +64,21 @@ onMounted(fetchMenu);
       <p class="mt-2 text-gray-600">Handcrafted beverages and fresh pastries made daily.</p>
     </header>
 
+    <div class="flex justify-center mb-8">
+      <input
+        v-model="searchQuery"
+        type="text"
+        placeholder="Search menu..."
+        class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-l-md focus:ring-2 focus:ring-green-400 focus:outline-none"
+      />
+      <button
+        @click="() => {}"
+        class="px-4 py-2 bg-green-600 text-white rounded-r-md hover:bg-green-700"
+      >
+        Search
+      </button>
+    </div>
+
     <div v-if="loading" class="flex justify-center items-center py-20">
       <svg class="animate-spin h-10 w-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
@@ -71,6 +95,10 @@ onMounted(fetchMenu);
       >
         Retry
       </button>
+    </div>
+
+    <div v-else-if="!loading && filteredMenu.length === 0" class="text-center py-10 text-gray-500">
+      No menu items found.
     </div>
 
     <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -121,7 +149,7 @@ onMounted(fetchMenu);
       </article>
     </div>
 
-    <div v-if="!loading && !error && props.showButton && menu.length > initialLimit" class="m-auto max-w-sm my-10 px-8 text-center">
+    <div v-if="!loading && !error && props.showButton && filteredMenu.length > initialLimit" class="m-auto max-w-sm my-10 px-8 text-center">
       <button
         @click="toggleExpanded"
         class="w-full inline-flex justify-center items-center gap-2 bg-gray-900 text-white py-3 px-6 rounded-xl hover:bg-gray-950 focus:outline-none focus:ring-2 focus:ring-green-300"
@@ -140,5 +168,3 @@ article:hover {
   transition: transform 160ms ease;
 }
 </style>
-
-
